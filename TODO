@@ -1,0 +1,9 @@
+[ ] It doesn't seem like there's a TZ setup in Rails for Hawaiian-Aleutian time, but I could be wrong
+[ ] The following prefixes all have disparate children, and need to be further defined
+	32, 340, 37, 38
+	40, 41, 42, 46, 47, 48, 49
+	57, 58
+	66, 67, 68, 69
+	85, 86
+	962, 963, 964, 965, 966, 969, 97
+

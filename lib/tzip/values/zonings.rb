@@ -1,0 +1,3 @@
+module TZip
+  ZONINGS = {}
+end
