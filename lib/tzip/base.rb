@@ -1,6 +1,6 @@
 module TZip
   module ClassMethods
-    def self.find_by_zipcode(zipcode)
+    def find_by_zipcode(zipcode)
       [5,4,3,2,1].each do |i|
         return MAPPING[zipcode.to_s[0,i]] if MAPPING.has_key?(zipcode.to_s[0,i])
       end      
