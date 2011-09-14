@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'active_support'
-require 'active_support/time'
+require 'active_support/time_with_zone'
 
 require 'tzip/base'
 require 'tzip/values/zone_names'
