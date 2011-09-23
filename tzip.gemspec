@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
  
   s.add_dependency('activesupport', '>= 2.3')
  
-  s.files        = Dir.glob("{bin,lib}/**/*") + %w(README.md)
+  s.files        = Dir.glob("{bin,lib}/**/*") + %w(readme.md)
   s.require_path = 'lib'
 end
