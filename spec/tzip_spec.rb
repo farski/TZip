@@ -19,7 +19,7 @@ describe TZip do
   end
 
   describe "Eastern" do
-    %w(00926 08701 11226 23464 28269 30043 30044).each{|zip|
+    %w(00926 08701 11226 23464 28269 30043 30044 48201 48109).each{|zip|
       it { print zip; lookup_zip(zip).should == 'Eastern Time (US & Canada)' }
     }
   end
