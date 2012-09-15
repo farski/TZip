@@ -33,7 +33,7 @@ describe TZip do
   end
 
   describe "Mountain" do
-    %w(59430 79936 84101 87121).each{|zip|
+    %w(59430 79936 84101 87121 97903).each{|zip|
       it { print zip; lookup_zip(zip).should == 'Mountain Time (US & Canada)' }
     }
   end
