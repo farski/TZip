@@ -1,3 +1,3 @@
 module TZip
-  ZONINGS[:arizona] = []
+  ZONINGS[:arizona] = %w{85 86}
 end
