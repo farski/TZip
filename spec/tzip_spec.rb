@@ -32,7 +32,7 @@ describe TZip do
     }
 
     # Pacific
-    %w(89110 90011 90650 97701 97301 97330 97225 97504).each{|zip|
+    %w(89110 90011 90650 97701 97301 97330 97225 97504 97051).each{|zip|
       it { print zip; lookup_zip(zip).should == 'Pacific Time (US & Canada)' }
     }
 
