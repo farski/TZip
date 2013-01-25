@@ -1,3 +1,3 @@
 module TZip
-  VERSION = "0.0.2.3" unless defined?(::TZip::VERSION)
+  VERSION = "0.0.4" unless defined?(::TZip::VERSION)
 end
