@@ -35,10 +35,10 @@ describe TZip do
       it { print zip; lookup_zip(zip).should == 'Pacific Time (US & Canada)' }
     }
 
+  describe '.find_by_zipcode' do
     context 'Tennessee' do
       let(:zips) { %w(38464) }
       let(:timezone) { 'Central Time (US & Canada)' }
-      subject { lookup_zip(zip) }
       it 'matches Central Time (US & Canada)' do
         zips.each do |zip|
           expect(lookup_zip(zip)).to eq timezone
@@ -46,4 +46,14 @@ describe TZip do
       end
     end
 
+    context 'Michigan' do
+      let(:zips) { %w(48439) }
+      let(:timezone) { 'Eastern Time (US & Canada)' }
+      it 'matches Eastern Time' do
+        zips.each do |zip|
+          expect(lookup_zip(zip)).to eq(timezone), zip
+        end
+      end
+    end
+  end
 end
