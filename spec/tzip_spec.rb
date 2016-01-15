@@ -1,6 +1,5 @@
 require "spec_helper"
 describe TZip do
-
     # Alaska
     %w(99615 99615 99927).each{|zip|
       it { print zip; lookup_zip(zip).should == 'Alaska' }
@@ -17,7 +16,7 @@ describe TZip do
     }
 
     # Eastern
-    %w(00926 08701 11226 23464 28269 30043 30044 48201 48109 32308 37604 37917 32207 32216 41017 40502 46032 48124 48197 48307 48532 48912 49008 49546 49684 48503 ).each{|zip|
+    %w(00926 08701 11226 23464 28269 30043 30044 48201 48109 32308 37604 37917 32207 32216 41017 40502 46032 48124 48197 48307 48532 48912 49008 49546 49684 48503 49242).each{|zip|
       it { print zip; lookup_zip(zip).should == 'Eastern Time (US & Canada)' }
     }
 
@@ -36,4 +35,25 @@ describe TZip do
       it { print zip; lookup_zip(zip).should == 'Pacific Time (US & Canada)' }
     }
 
+  describe '.find_by_zipcode' do
+    context 'Tennessee' do
+      let(:zips) { %w(38464) }
+      let(:timezone) { 'Central Time (US & Canada)' }
+      it 'matches Central Time (US & Canada)' do
+        zips.each do |zip|
+          expect(lookup_zip(zip)).to eq timezone
+        end
+      end
+    end
+
+    context 'Michigan' do
+      let(:zips) { %w(48439) }
+      let(:timezone) { 'Eastern Time (US & Canada)' }
+      it 'matches Eastern Time' do
+        zips.each do |zip|
+          expect(lookup_zip(zip)).to eq(timezone), zip
+        end
+      end
+    end
+  end
 end
