@@ -1,3 +1,3 @@
 module TZip
-  ZONINGS[:hawaii] = %w{967 968}
+  ZONINGS[:hawaii] = %w(967 968)
 end
