@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'spork'
-require 'spork/ext/ruby-debug'
 require 'active_support'
 require 'rspec'
 
